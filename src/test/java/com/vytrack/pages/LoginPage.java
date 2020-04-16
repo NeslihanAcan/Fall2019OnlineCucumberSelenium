@@ -1,9 +1,8 @@
 package com.vytrack.pages;
 
-
-import com.automation.utilities.BrowserUtils;
-import com.automation.utilities.ConfigurationReader;
-import com.automation.utilities.Driver;
+import com.vytrack.utilities.BrowserUtilities;
+import com.vytrack.utilities.ConfigurationReader;
+import com.vytrack.utilities.Driver;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -40,8 +39,8 @@ public class LoginPage {
     public void login(String usernameValue, String passwordValue) {
         username.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
-        BrowserUtils.waitForPageToLoad(10);
-        BrowserUtils.wait(3);
+        BrowserUtilities.waitForPageToLoad(10);
+        BrowserUtilities.wait(3);
     }
     /**
      * Method to login, version #2
@@ -51,7 +50,7 @@ public class LoginPage {
     public void login() {
         username.sendKeys(ConfigurationReader.getProperty("store_manager"));
         password.sendKeys(ConfigurationReader.getProperty("password"), Keys.ENTER);
-        BrowserUtils.waitForPageToLoad(10);
-        BrowserUtils.wait(3);
+        BrowserUtilities.waitForPageToLoad(10);
+        BrowserUtilities.wait(3);
     }
 }
