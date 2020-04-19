@@ -1,8 +1,10 @@
+@login
 Feature: Login
-  As user, I want to login with username and password
-    #Agile story
-  #Test Method = Test Case = Scenario
-  #Test + DataProvider= Scenario Scenario Outline= Examples table
+  As user, I want to be able to login with username and password
+#  Agile story
+
+#  Test Method = Test Case = Scenario
+#  Test + DataProvider = Scenario Outline + Examples table
 
   Background: open login page
     Given user is on the login page
@@ -22,7 +24,7 @@ Feature: Login
     When user logs in as a driver
     Then user should verify that title is a Dashboard
 
-   @login_with_params
-   Scenario: login with parameters
-    When user enters "storemanager115" username and "UserUser123" password
+  @login_with_params
+  Scenario: Login with parameters
+    When user enters "salesmanager115" username and "UserUser123" password
     Then user should verify that title is a Dashboard
